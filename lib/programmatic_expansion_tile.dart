@@ -194,26 +194,17 @@ class ProgrammaticExpansionTileState extends State<ProgrammaticExpansionTile>
       decoration: BoxDecoration(
         color: widget.backgroundColor,
         borderRadius: BorderRadius.circular(8),
-        border: setBorder
-            ? Border(
-                top: BorderSide(color: borderSideColor),
-                bottom: BorderSide(color: borderSideColor),
-              )
-            : null,
+      
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          ListTileTheme.merge(
-            iconColor: _iconColor.value,
-            textColor: _headerColor.value,
-            child: GestureDetector(
+         GestureDetector(
               onTap: toggle,
               child: Container(
                 child: widget.title,
               ),
             ),
-          ),
           ClipRect(
             child: Align(
               heightFactor: _heightFactor.value,

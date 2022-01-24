@@ -67,11 +67,13 @@ class _ListTileExample extends State<ExpansionTileExample> {
     return DragAndDropListExpansion(
       backgroundColor: Colors.red,
       title: Container(
+        width: double.infinity,
         height: 50,
         decoration: BoxDecoration(
         color: Colors.red,
           borderRadius: BorderRadius.circular(8)
         ),
+        child: Text('hOLA'),
       ),
       subtitle: Text('Subtitle ${innerList.name}'),
       leading: Icon(Icons.ac_unit),
