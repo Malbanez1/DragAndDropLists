@@ -190,8 +190,10 @@ class ProgrammaticExpansionTileState extends State<ProgrammaticExpansionTile>
     bool setBorder = !widget.disableTopAndBottomBorders;
 
     return Container(
+      margin: EdgeInsets.only(bottom: 8),
       decoration: BoxDecoration(
-        color: _backgroundColor.value ?? Colors.transparent,
+        color: widget.backgroundColor,
+        borderRadius: BorderRadius.circular(8),
         border: setBorder
             ? Border(
                 top: BorderSide(color: borderSideColor),
